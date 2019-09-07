@@ -9,5 +9,4 @@ public class User
 		Car c1 = Showroom.salesEx();
 		c1.display();
 	}
-
 }
