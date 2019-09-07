@@ -1,6 +1,6 @@
 package mock;
 
-import java.util.Iterator;
+
 
 public class Pattern
 {
