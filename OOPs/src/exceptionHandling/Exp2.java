@@ -8,11 +8,10 @@ public class Exp2
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the String");
 		String s = scan.nextLine();
-		System.out.println("enter the index no.");
+		int val = s.length();//used to know the length of String
+		System.out.println("enter the index no. index number should be in range of [ 0-"+(val-1)+" ]");
 		int index = scan.nextInt();
 		char ch;
-		System.out.println(s.length());//used to know the length of String
-		
 		while(true)
 		{
 			try
@@ -22,12 +21,13 @@ public class Exp2
 			}
 			catch(StringIndexOutOfBoundsException rv)
 			{
-				System.out.println("Index number out of range re-enter in range of [ 0-");
+				System.out.println("Index number out of range re-enter in range of [ 0-"+(val-1)+" ]");
 				index = scan.nextInt();
 				
 			}
 		}
+		
 		System.out.println(ch);
+		
 	}
-
 }

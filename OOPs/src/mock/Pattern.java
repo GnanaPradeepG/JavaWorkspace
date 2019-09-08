@@ -1,7 +1,6 @@
 package mock;
 
 
-
 public class Pattern
 {
 
