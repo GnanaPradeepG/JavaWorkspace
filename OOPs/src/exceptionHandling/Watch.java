@@ -16,16 +16,15 @@ public class Watch
 		}
 		else
 		{
-			throw new TimeFormatException("Time format invalid please provide in format of HH:MM:SS with HH[0-23] MM[0-59] SS[0-59]");
+			throw new TimeFormatException();
 		}
 	}
-	public void display() 
+	
+	@Override
+	public String toString()
 	{
-			System.out.println("Time is "+hour+":"+min+":"+sec);
+		return "The time is "+this.hour+":"+this.min+":"+this.sec;
 	}
-	
-	
-	
 	
 	
 }

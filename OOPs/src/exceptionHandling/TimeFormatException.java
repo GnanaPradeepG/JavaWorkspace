@@ -3,9 +3,10 @@ package exceptionHandling;
 public class TimeFormatException extends RuntimeException 
 {
 	String a;
-	public TimeFormatException(String a) 
-	{
-		super(a);
-	}
+@Override
+public String toString() 
+{
+	return "Time format invalid please provide in format of HH:MM:SS with HH[0-23] MM[0-59] SS[0-59]";
+}
 	
 }
