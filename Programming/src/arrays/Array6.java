@@ -1,8 +1,6 @@
 //WAP to create integer array and print data in reverse order
 package arrays;
 import java.util.Scanner;
-
-import scannerClass.Scan;
 public class Array6 
 {
 
