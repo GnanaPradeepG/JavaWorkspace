@@ -10,7 +10,7 @@ public class String1
 		System.out.print("Enter the string : ");
 		String s = scan.next();
 		int count = 0;
-		for (int i = 0; i < s.length() ; i++) 	
+		for (int i = 0; i < s.length() ; i++)
 		{
 			char ch = s.charAt(i);
 			if(ch == 'e')

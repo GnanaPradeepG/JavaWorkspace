@@ -29,6 +29,8 @@ public class String5
 			
 		}
 		
+		
+		
 		if(status == false)
 		{
 			System.out.println("The given char is not present in given String.");

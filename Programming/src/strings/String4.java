@@ -11,7 +11,7 @@ public class String4
 	{
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter the string : ");
-		String s = scan.next();
+		String s = scan.nextLine();
 		int countA = 0;
 		int countE = 0;
 		int countI = 0;
@@ -54,17 +54,17 @@ public class String4
 		{
 			System.out.println("no. of e's present in the String are : "+ countA);
 		}
-		if(countA>0)
+		if(countI>0)
 		{
 			System.out.println("no. of i's present in the String are : "+ countA);
 		}
 		
-		if(countA>0)
+		if(countO>0)
 		{
 			System.out.println("no. of o's present in the String are : "+ countA);
 		}
 		
-		if(countA>0)
+		if(countU>0)
 		{
 			System.out.println("no. of u's present in the String are : "+ countA);
 		}
