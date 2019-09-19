@@ -9,7 +9,8 @@ public class NumberToWords
 		System.out.println("Enter the number : ");
 		int number = scan.nextInt();
 		numberToWords(number);
-		System.out.println(reverse(number));
+		//System.out.println(reverse(number));
+		reverse(number);
 		System.out.println(getDigitCount(number));
 	}
 
@@ -89,21 +90,27 @@ public class NumberToWords
 		System.out.println();
 	}
 
-	public static String reverse(int number) 
+	public static void reverse(int number) 
 	{
-		String s = "" + number;
-		char[] a =s.toCharArray();
-		String temp = "";
-		for (int i = 0; i < a.length; i++)
+		while(number!=0)
 		{
-			temp = a[i]+"";
+			int rem = number%10;
+			number = number/10;
+			System.out.print(rem);
 		}
-		return temp;
+		System.out.println();
 	}
 
 	public static int getDigitCount(int number)
 	{
-		String s = ""+number;
-		return s.length();
+		if(number>=0)
+		{
+			String s = ""+number;
+			return s.length();
+		}
+		else
+		{
+			return -1;
+		}
 	}
 }
