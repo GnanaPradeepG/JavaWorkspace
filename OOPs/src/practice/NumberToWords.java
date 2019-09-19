@@ -95,6 +95,7 @@ public class NumberToWords
 		if(number<0)
 		{
 			System.out.print('-');
+		}
 			while(number!=0)
 			{
 				if(number<0)
@@ -106,7 +107,6 @@ public class NumberToWords
 				System.out.print(rem);
 			}
 			System.out.println();
-		}
 	}
 
 	public static int getDigitCount(int number)
