@@ -92,13 +92,21 @@ public class NumberToWords
 
 	public static void reverse(int number) 
 	{
-		while(number!=0)
+		if(number<0)
 		{
-			int rem = number%10;
-			number = number/10;
-			System.out.print(rem);
+			System.out.print('-');
+			while(number!=0)
+			{
+				if(number<0)
+				{
+					number = number*(-1);
+				}
+				int rem = number%10;
+				number = number/10;
+				System.out.print(rem);
+			}
+			System.out.println();
 		}
-		System.out.println();
 	}
 
 	public static int getDigitCount(int number)
