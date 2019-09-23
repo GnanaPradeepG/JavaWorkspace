@@ -1,25 +1,28 @@
 package demoPack1;
 
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Scanner;
 
 public class BookDAOImplementation implements BookDAO
 {
 
-	private final static ArrayList<Book> booklist = new ArrayList<Book>();
-	
+	private final static ArrayList<Book> bookList = new ArrayList<Book>();
+
 	@Override
 	public void insertBook(Book book) 
 	{
-		booklist.add(book);
+		bookList.add(book);
 	}	@Override
 	public ArrayList<Book> searchBook(String bookAuthor) 
 	{
-		ArrayList<Book> retrivedBookList = new ArrayList<Book>();
-		Iterator<Book> bookIterator = booklist.iterator();
+
+		Iterator<Book> bookIterator = bookList.iterator();
 		Book retrivedBook=null;
 		String retrivedBookAuthor = null;
-		
+		ArrayList<Book> retrivedBookList = new ArrayList<Book>();
+
 		while(bookIterator.hasNext())
 		{
 			retrivedBook = bookIterator.next();
@@ -38,38 +41,57 @@ public class BookDAOImplementation implements BookDAO
 		{
 			return retrivedBookList;
 		}
-			
+
 	}
 
 	@Override
 	public void removeBook(String bookTitle)
 	{
-		Iterator<Book> bookIterator = booklist.iterator();
 		Book retrivedBook = null;
 		String retrivedBookTitle = null;
 		ArrayList<Book> retrivedBookList = new ArrayList<Book>();
-		
-		while(bookIterator.hasNext())
+
+		for(int i=0; i<=bookList.size()-1 ; i++)
 		{
-			retrivedBook = bookIterator.next();
+			retrivedBook = bookList.get(i);
 			retrivedBookTitle = retrivedBook.getBookTitle();
-			
-			if(retrivedBookTitle.equals(bookTitle))
+			if(bookTitle.equals(retrivedBookTitle))
 			{
 				retrivedBookList.add(retrivedBook);
 			}
-			
 		}
 		
-		int retrivedBookListSize = retrivedBookList.size();
-		System.out.println();
-		Iterator<Book> list = retrivedBookList.iterator();
-		
+		for(int i=0; i<=retrivedBookList.size()-1 ; i++)
+		{
+			retrivedBook = retrivedBookList.get(i);
+			System.out.println(retrivedBook.getBookTitle()+" written by "+retrivedBook.getBookAuthor());
+		}
+
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter author name : ");
+		String bookAuthor = scan.next();
+
+		if(retrivedBookList.size()==0)
+		{
+			throw new BookNotFoundException(bookTitle);
+		}
+		else
+		{
+			for(int i = 0; i<=bookList.size()-1 ;i++)
+			{
+				retrivedBook = bookList.get(i);
+				String retrivedBookAuthor = retrivedBook.getBookAuthor();
+				if(retrivedBookTitle.equals(bookTitle) && retrivedBookAuthor.equals(bookAuthor))
+				{
+					bookList.remove(i);
+					System.out.println(bookAuthor);
+					break;
+				}
+			}
+			System.out.println("Book is removed successfully...");
+		}
 	}
-		
 }
-
-
 
 
 
