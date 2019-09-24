@@ -1,5 +1,7 @@
 package demoPack1;
+import java.util.ArrayList;
 import java.util.Scanner;
+
 public class Librarian
 {
 
@@ -9,8 +11,8 @@ public class Librarian
 		BookDAO dao = Library.bookDAO();
 
 		System.out.println("WELCOME TO LIBRARY MANAGEMENT SYSTEM...");
-		String choice = "y";
-		while(choice.equals("y") || choice.equals("yes") || choice.equals("Y") || choice.equals("YES"))
+		String choice = null;
+		do
 		{
 			System.out.println("Press 1 to insert book");
 			System.out.println("Press 2 to search book");
@@ -36,14 +38,35 @@ public class Librarian
 				{
 					System.out.println("To search a book please enter the author name : ");
 					String ba = scan.next();
-					System.out.println(dao.searchBook(ba));
+					
+					try
+					{
+						ArrayList<Book> retrivedBook = dao.searchBook(ba);
+						
+						for (int i = 0; i <= retrivedBook.size()-1 ; i++)
+						{
+							System.out.println(retrivedBook.get(i));
+						}
+					}
+					catch(BookNotFoundException rv)
+					{
+						System.out.println(rv);
+					}
+					
 				}
 				else if(ip == 3)
 				{
 					System.out.println("To remove a book please enter the book title : ");
 					String bt = scan.next();
-					dao.removeBook(bt);
-					System.out.println("debug");
+					
+					try
+					{
+						dao.removeBook(bt);
+					}
+					catch(BookNotFoundException rv)
+					{
+						System.out.println(rv);
+					}
 				}
 
 
@@ -57,7 +80,9 @@ public class Librarian
 				System.out.println();
 			}
 		}
-		System.out.println("Thanks you visit again...");
+		while(choice.equals("y") || choice.equals("yes") || choice.equals("Y") || choice.equals("YES"));
+		
+		System.out.println("Thank you visit again...");
 	}
 
 }
