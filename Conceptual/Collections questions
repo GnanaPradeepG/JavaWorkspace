@@ -1,0 +1,76 @@
+
+
+
+================================18.09.2019===========================================
+
+
+1.WAP to create TreeSet and store colors and retrive one by one?
+
+2. WAP to create TreeSet and store double , integer , String object , character object and retrive one by one?
+
+3.WAP to create TreeSet , which holds double object retrive first 3 objects and remove 4th object and continue retrival?
+
+4.WAP to create linked hash set and add fruit name and retrive one by one?
+
+5.WAP to create LinkedHash set and add integer,  object double object , String ,character, boolean objects and retrive data?
+
+6.WAP to create hash set object and add visiting places one by one?
+
+7.WAP to create HashSet object and and store double , string, char, boolean objects and retrive one by one?
+
+=================================19.09.2019==========================================
+
+
+1. WAP to create array list and store different types of objects string, integer, double read i/p during runtime and retrive one by one? 
+
+2. WAP to create array list object and store 5 integer elements and read during runtime and retrive one by one?
+
+3.WAP to create vector object and store double elements and retrive one by one?
+
+4. WAP to create vector object and store different objects of boolean , double , string , integer, and retrive one by one?
+
+5.WAP to create linked list object and store your friends name and retrive one by one?
+
+6.  WAP to create linked list object and store double , int , string, boolean objects and retrive one by one?
+
+7.WAP to create 2 Array list objects first integer elements second will have double elements create 3rd and transfer all from first and second array lists 
+ 		
+ 		and display first second and third array list?
+ 		
+ 		
+ 		
+ =============================25.09.2019=======================================
+ 
+ 1.WAP to create ArrayList object and perform forward direction and backward direction traversing?
+ 
+ 2.WAP to create ArrayList object and store different types of objects and  retrive elements one by one in bi direction traversing?
+ 
+ 3.WAP to create LinkedList object and store different types of objects and retrive one by one by using forward direction travering?
+ 
+ 4.WAP to create Vector object and store different types of Objects and retrive one by one using get method?
+ 
+ 5.WAP to create PriorityQueue object and store only double objects and retrive one by one through forward direction traversing?
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

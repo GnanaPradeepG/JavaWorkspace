@@ -8,7 +8,7 @@ public class TreeSet1
 
 	public static void main(String[] args) 
 	{
-		//TreeSet doesnot accept duplicate values it sorts in ascending order
+		//TreeSet does not accept duplicate values it sorts in ascending order
 		TreeSet t1 = new TreeSet();			//creating TreeSet object to pass values
 		t1.add(new String("Red"));
 		
